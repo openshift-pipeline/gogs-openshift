@@ -20,7 +20,7 @@ ENV HOME=/var/lib/gogs
 COPY ./root /
 
 RUN curl -L -o /etc/yum.repos.d/gogs.repo https://dl.packager.io/srv/gogs/gogs/main/installer/el/7.repo && \
-    rpm --import https://rpm.packager.io/key && \
+    rpm --import https://dl.packager.io/srv/gogs/gogs/key && \
     yum -y install epel-release && \
     yum -y --setopt=tsflags=nodocs install gogs-${GOGS_VERSION} nss_wrapper gettext && \
     yum -y clean all && \
