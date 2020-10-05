@@ -27,6 +27,7 @@ RUN curl -L -o /etc/yum.repos.d/gogs.repo https://dl.packager.io/srv/gogs/gogs/m
     mkdir -p /var/lib/gogs
 
 RUN chmod +x /usr/bin/fix-permissions && \
+    chmod +x /usr/bin/rungogs && \
     /usr/bin/fix-permissions /var/lib/gogs && \
     /usr/bin/fix-permissions /home/gogs && \
     /usr/bin/fix-permissions /opt/gogs && \
